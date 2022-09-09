@@ -1,0 +1,15 @@
+
+<div>
+    <img class="img-thumbnail" [src]="pokemonDetails.spriteUrl" alt="pokemon image">
+    <ul class="list-group list-group-horizontal" >
+        <li class="list-group-item list-group-item-info"> ABILITIES:</li>
+        <li class="list-group-item list-group-item-primary"> {{pokemonDetails.abilities[0]}} </li>
+        <li class="list-group-item list-group-item-primary"> {{pokemonDetails.abilities[1]}} </li>
+    </ul>
+    <br>
+    <button class="btn btn-primary" (click)="addPokemonToTeam()">Add to your Team</button>
+    <p>{{successMessage}}</p>
+</div>
+
+
+

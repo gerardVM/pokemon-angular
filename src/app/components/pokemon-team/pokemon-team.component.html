@@ -1,0 +1,21 @@
+<h2> Choose a Team </h2>
+
+<div class="list-group">
+<li class="list-group-item list-group-item-dark"> TRAINER: {{selectedTrainer.name}}</li>
+</div>
+<div class="list-group" *ngFor="let pokemon of team" >
+    <table>
+        <tr>
+            <td class="list-group-item" style="width: 8em;">
+                {{pokemon.name}}
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="deletePokemonFromTeam(pokemon)">Delete</button> 
+            </td>
+        </tr>  
+    </table>  
+</div>
+<br>
+<div>
+<button class="btn btn-outline-secondary btn-sm" (click)="update()">Update</button>
+</div>

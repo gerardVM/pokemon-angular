@@ -1,0 +1,25 @@
+<table><tr><td>
+<br>
+
+<div [formGroup]="pokemonForm">
+    <h2> Choose a Pokemon </h2>
+    <select class="form-select" (change)="onChoose()" name="pokemon-selector" formControlName="pokemonSelector">
+        <option *ngFor="let pokemon of pokemonNames" [value]="pokemon.name">
+            {{pokemon.name}}
+        </option>        
+    </select>    
+
+</div>
+<br>
+<div>
+    <app-pokemon-details [pokemonDetails]="pokemonDetails" [selectedTrainer]="selectedTrainer"></app-pokemon-details>
+</div>
+</td>
+<td>
+    <app-pokemon-team [selectedTrainer]="selectedTrainer"></app-pokemon-team>
+</td>
+<td>
+    <app-pokemon-trainer (trainerEvent)="selectTrainer($event)"></app-pokemon-trainer>
+</td>
+</tr>
+</table>

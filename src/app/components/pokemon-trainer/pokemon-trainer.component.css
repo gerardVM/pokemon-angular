@@ -1,0 +1,12 @@
+td {
+    width: 6em;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20em;
+    margin: 100 auto;
+    font-size: 15px;
+}

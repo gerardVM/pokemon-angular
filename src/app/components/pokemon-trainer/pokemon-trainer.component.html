@@ -1,0 +1,23 @@
+<br>
+<h2> Create a new Trainer </h2>
+<form (ngSubmit)="onSubmit()" [formGroup]="trainerForm" style="width: 15em;">
+
+    <input class="form-control" type="text" placeholder="Name..." formControlName="trainerNameInput">
+    <br>
+    <button class="btn btn-primary" type="submit" [disabled]="trainerForm.invalid">Create</button>
+    
+</form>
+<br>
+<h2> Choose a trainer </h2>
+<div *ngFor="let trainer of trainers" class="list-group">    
+    <table>
+        <tr>
+            <td>
+                <a href="#" class="list-group-item" (click)="selectTrainer(trainer.id)">{{trainer.name}}</a>
+            </td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteTrainer(trainer.id)">Delete</button>
+            </td>
+        </tr>
+    </table>   
+</div>
